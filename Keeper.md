@@ -17,7 +17,8 @@ In this document there are two main sections. The first focused into find user f
 
 Using NMAP to gather information regarding the open ports I have discovered that **SSH** and **HTTP** service are available respective over the ports 22 and 80.
 
-![_7599178f86efa7eeb05c8e1e9f0df36c.png](_resources/7599178f86efa7eeb05c8e1e9f0df36c.png)*Figure 1: NMAP scanning to search for services*
+![_7599178f86efa7eeb05c8e1e9f0df36c.png](_resources/7599178f86efa7eeb05c8e1e9f0df36c.png)
+*Figure 1: NMAP scanning to search for services*
 
 * * *
 **Little Parenthesis**: When I know that an host is online I usually use the *-Pn* parameter. In this way no host discovery is done before the ports scan operation start. According to me it is a best practice in real life scenario to reduce your noise over the network. 
