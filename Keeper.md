@@ -54,13 +54,17 @@ The password is still valid, and it can be a real word scenario. Unfortunately, 
 
 Analyzing the content of the user home directory is possible to discover that there is a zip file. It belongs to root user so it is a synonymous of useful information. I was able to open it because all users are able to read it (other misconfiguration).
 
-![9628464b808ea9391968076adb122d60.png](_resources/9628464b808ea9391968076adb122d60.png)*Figure 6: Content of  lnorgaard's home directory*
+![9628464b808ea9391968076adb122d60.png](_resources/9628464b808ea9391968076adb122d60.png)
+
+*Figure 6: Content of  lnorgaard's home directory*
 
 I have used `unzip` tool to extract the content and it contains:
 - A KeePass dump file
 - A KeePass db.
 
-![217cc7068bfea7cbcf8faa9b13e16d5d.png](_resources/217cc7068bfea7cbcf8faa9b13e16d5d.png)*Figure 7: After the extraction of the content stored into zip file*
+![217cc7068bfea7cbcf8faa9b13e16d5d.png](_resources/217cc7068bfea7cbcf8faa9b13e16d5d.png)
+
+*Figure 7: After the extraction of the content stored into zip file*
 
 I have searched online about KeePass vulnerabilities and there is the **CVE-2023-32784** that affects all the KeePass versions previous the **2.54** that was released in 6 June 2023. 
 Therefore, since the file modification date is set before the release date of version 2.54 it is possible to exploit the CVE-2023-32784 vulnerability.
@@ -91,7 +95,9 @@ In the root's *Notes* field is possible to see that is specified a PuTTY private
 
 Saving the content into a file (that I have named rsa.ppk) is possible to convert it to a **pem file** using the tool `puttygen` (as displayed into Figure 11) in order to login as root. Otherwise, it is possible to connect to the host via PuTTY uploading the PPK file.
 
-![2e77f9abe026b241be8b159686296854.png](_resources/2e77f9abe026b241be8b159686296854.png)*Successfull enter as root into keeper host via ssh*
+![2e77f9abe026b241be8b159686296854.png](_resources/2e77f9abe026b241be8b159686296854.png)
+
+*Figure 11: Successfull enter as root into keeper host via ssh*
 
 In the above screen the `puttygen` parameters are: 
 - **-O**: used to specify the type of output you want puttygen to produce
