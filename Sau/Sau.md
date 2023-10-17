@@ -97,8 +97,6 @@ If no command is specified, the **-l** (list) option will list the allowed (and 
 
 An other important misconfiguration that the command displayed into Figure 9 can be executed without the user authentication (ALL: ALL) **NOPASSWD**.
 
-![5ae6277c704b05d7b6146e1ec80003c1.png](_resources/5ae6277c704b05d7b6146e1ec80003c1.png)
-
 I have searched online how to exploit this features, I have found this useful article that talks about the systemctl status exploit ([link](https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-systemctl-privilege-escalation/#spawn-shell-in-the-pager)). The reference is also [gtfobins](https://gtfobins.github.io/gtfobins/systemctl/)
 If we can execute systemctl status as root, we can spawn another shell in the pager.
 Just run the command with sudo and then in pager entering into the **!sh** command.  
